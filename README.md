@@ -1,5 +1,5 @@
 # nanovc-git-inspiration-java
-![NanoVC Git Inspired Java Implementation](https://github.com/nanovc/nanovc-git-inspiration-java/workflows/NanoVC%20Git%20Inspiration%20Java%20Implementation/badge.svg)
+[![NanoVC Git Inspiration Java Implementation](https://github.com/nanovc/nanovc-git-inspiration-java/actions/workflows/gradle.yml/badge.svg)](https://github.com/nanovc/nanovc-git-inspiration-java/actions/workflows/gradle.yml)
 
 Java implementation of Nano Version Control inspired by Git.
 
