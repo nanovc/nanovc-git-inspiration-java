@@ -127,7 +127,7 @@ public interface PlumbingCommands
 
     /**
      * Compute object ID.
-     * Computes the object ID value for an object with specified type with the contents of the content byte array,
+     * Computes the object ID value for an object with specified type with the contents of the content byte array.
      * This method does not write the resulting object into the object database.
      * To write the object into the database call {@link #hash_object_write(ObjectType, byte[])}
      * Reports its object ID to its standard output.
@@ -146,7 +146,7 @@ public interface PlumbingCommands
 
     /**
      * Compute object ID.
-     * Computes the object ID value for an object with specified type with the contents of the content byte array,
+     * Computes the object ID value for an object with specified type with the contents of the content byte array.
      * This method does not write the resulting object into the object database.
      * To write the object into the database call {@link #hash_object_write(ObjectType, byte[])}
      * Reports its object ID to its standard output.
@@ -322,6 +322,8 @@ public interface PlumbingCommands
      * Conceptually, git write-tree sync()s the current index contents into a set of tree files.
      * In order to have that match what is actually in your directory right now,
      * you need to have done a git update-index phase before you did the git write-tree.
+     * <p>
+     * https://git-scm.com/docs/git-write-tree
      *
      * @return The root tree object that was created. A tree object is created for each sub folder that is written, but this method only returns the root tree.
      */
@@ -415,6 +417,8 @@ public interface PlumbingCommands
      * so that we can always see what the last committed state was.
      * <p>
      * The current committer and author is used for the commit.
+     * <p>
+     * https://git-scm.com/docs/git-commit-tree
      *
      * @param rootTreeHash       The hash value of the tree to use as the root of the commit.
      * @param commitMessage      The commit message to use.
@@ -453,6 +457,8 @@ public interface PlumbingCommands
      * so that we can always see what the last committed state was.
      * <p>
      * The current committer and author is used for the commit.
+     * <p>
+     * https://git-scm.com/docs/git-commit-tree
      *
      * @param rootTreeHashValue  The SHA1 hash value of the tree to use as the root of the commit.
      * @param commitMessage      The commit message to use.
@@ -494,6 +500,8 @@ public interface PlumbingCommands
      * rev-list is a very essential Git command,
      * since it provides the ability to build and traverse commit ancestry graphs.
      * For this reason, it has a lot of different options that enables it to be used by commands as different as git bisect and git repack.
+     * <p>
+     * https://git-scm.com/docs/git-rev-list
      *
      * @param commitHash The hash of the commit that we want to walk backwards down to the root.
      * @return The list of commit objects in reverse chronological order.
@@ -535,6 +543,8 @@ public interface PlumbingCommands
      * rev-list is a very essential Git command,
      * since it provides the ability to build and traverse commit ancestry graphs.
      * For this reason, it has a lot of different options that enables it to be used by commands as different as git bisect and git repack.
+     * <p>
+     * https://git-scm.com/docs/git-rev-list
      *
      * @param commitHashValue The SHA-1 hash value of the commit that we want to walk backwards down to the root.
      * @return The list of commit objects in reverse chronological order.
@@ -601,6 +611,8 @@ public interface PlumbingCommands
 
     /**
      * Updates the HEAD symbolic reference to the given reference name.
+     * <p>
+     * https://git-scm.com/docs/git-symbolic-ref
      *
      * @param reference The reference to update HEAD to.
      * @return The HEAD symbolic reference for the repo.
@@ -612,6 +624,8 @@ public interface PlumbingCommands
 
     /**
      * Updates the HEAD symbolic reference to the given reference name.
+     * <p>
+     * https://git-scm.com/docs/git-symbolic-ref
      *
      * @param referenceName The name of the reference to update HEAD to.
      * @return The HEAD symbolic reference for the repo.

@@ -13,6 +13,7 @@ public interface PorcelainCommands
 {
     /**
      * Create an empty Git repository or reinitialize an existing one.
+     * <p>
      * https://git-scm.com/docs/git-init
      *
      * @return The repo that was initialised.
@@ -22,6 +23,8 @@ public interface PorcelainCommands
     /**
      * Gets a log of all the commits leading up to the given commit.
      * The list is in reverse chronological order.
+     * <p>
+     * https://git-scm.com/docs/git-log
      *
      * @param commitHash The hash of the commit that we want to log backwards down to the root.
      * @return The log of commits from the given commit, going backwards to the root.
@@ -34,6 +37,8 @@ public interface PorcelainCommands
     /**
      * Gets a log of all the commits leading up to the given commit.
      * The list is in reverse chronological order.
+     * <p>
+     * https://git-scm.com/docs/git-log
      *
      * @param reference The reference to the commit that we want to log backwards down to the root.
      * @return The log of commits from the given commit, going backwards to the root.
@@ -46,6 +51,8 @@ public interface PorcelainCommands
     /**
      * Gets a log of all the commits leading up to the given commit.
      * The list is in reverse chronological order.
+     * <p>
+     * https://git-scm.com/docs/git-log
      *
      * @param commitHashOrReference The SHA-1 hash or reference name (branch name) of the commit that we want to log backwards down to the root.
      * @return The log of commits from the given commit, going backwards to the root.
@@ -55,6 +62,8 @@ public interface PorcelainCommands
     /**
      * Gets a log of all the commits leading up to the given commit.
      * The list is in reverse chronological order.
+     * <p>
+     * https://git-scm.com/docs/git-log
      *
      * @param commitHashValue The SHA-1 hash of the commit that we want to log backwards down to the root.
      * @return The log of commits from the given commit, going backwards to the root.
@@ -64,6 +73,8 @@ public interface PorcelainCommands
     /**
      * Gets a log of all the commits leading up to the given commit.
      * The list is in reverse chronological order.
+     * <p>
+     * https://git-scm.com/docs/git-log
      *
      * @param referenceName The name of the reference to log from.
      * @return The log of commits from the given commit, going backwards to the root.
@@ -117,6 +128,8 @@ public interface PorcelainCommands
     /**
      * Stages the given content at the given path in the given repo.
      * This is useful if you want to bypass the working area and stage content directly.
+     * <p>
+     * https://git-scm.com/docs/git-stage
      *
      * @param path    The path in the repo to stage the content in.
      * @param content The content to stage at the given path.
@@ -131,6 +144,8 @@ public interface PorcelainCommands
     /**
      * Stages the given content at the given path in the given repo.
      * This is useful if you want to bypass the working area and stage content directly.
+     * <p>
+     * https://git-scm.com/docs/git-stage
      *
      * @param absolutePath The absolute path in the repo to stage the content in.
      * @param content      The content to stage at the given path.
@@ -333,9 +348,9 @@ public interface PorcelainCommands
 
     /**
      * Creates a new branch with the given name.
-     *
+     * <p>
      * https://git-scm.com/docs/git-branch
-     *
+     * <p>
      * The command’s second form creates a new branch head named <branchname> which points to the current HEAD, or <start-point> if given.
      * Note that this will create the new branch, but it will not switch the working tree to it; use "git checkout <newbranch>" to switch to the new branch.
      *
@@ -346,9 +361,9 @@ public interface PorcelainCommands
     /**
      * Deletes the branches with the given names.
      * If the branches with the names don't exist then nothing happens.
-     *
+     * <p>
      * https://git-scm.com/docs/git-branch
-     *
+     * <p>
      * With a -d or -D option, <branchname> will be deleted.
      * You may specify more than one branch for deletion.
      * If the branch currently has a reflog then the reflog will also be deleted.
@@ -359,6 +374,9 @@ public interface PorcelainCommands
 
     /**
      * Gets the name of the currently checked out branch.
+     * <p>
+     * https://git-scm.com/docs/git-branch#Documentation/git-branch.txt---show-current
+     *
      * @return The name of the branch that we are currently on.
      */
     String getCurrentBranchName();
